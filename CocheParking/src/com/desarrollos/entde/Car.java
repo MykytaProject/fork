@@ -30,20 +30,19 @@ public class Car
     	Garage g = new Garage();
     	Car car = new Car(g);
         car.accelerate();
-        slowDown();
-        moveDown();
-        accelerate();
-        car.printGarage();
+        slowDown(); 	// hacemos Static los 3 métodos de abajo para poder acceder a ellos.
+        moveDown(); 	//
+        accelerate();	//
+        Garage.printGarage(); // printGarage no es un metodo de la clase car sino de la clase Garage y hay que llamarlp de forma adecuada
 //        turnRight();
 //        turnHeadlightsOn();
 //        turnHeadlightsOff();
     }    
-
-    /**
+	/**
      * Accelerate the car
      * @throws InterruptedException 
      */
-    public void accelerate() throws InterruptedException{
+    	static public void accelerate() throws InterruptedException{
         String c = new String("*");
         String space = new String(" ");
     	for(int i=0; i<5; i++)
@@ -58,8 +57,8 @@ public class Car
      * Slow down the car
      * @throws InterruptedException 
      */
-    public void slowDown() throws InterruptedException{
-    	string c = new string("     *");
+    	static public void slowDown() throws InterruptedException{
+    	String c = new String("     *"); //Correccion sintactica, String va con mayuscula
     	for(int i=0; i<5; i++)
         {
         	System.out.print(c);
@@ -73,9 +72,9 @@ public class Car
      * Move the car downwards
      * @throws InterruptedException 
      */    
-    public void moveDown() throws InterruptedException{
-    	string c = new string("\t\t\t\t  *"));
-    	for(int i=0, i<5, i++)
+    	static public void moveDown() throws InterruptedException{
+    	String c = new String("\t\t\t\t  *"); // Correccion sintactica, String va con mayuscula, sobra paréntesis.
+    	for(int i=0; i<5; i++) //Cambiamos comas por punto y comas
         {
     		if(i!=4)
     			System.out.println(c);

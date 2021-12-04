@@ -2,8 +2,8 @@ package com.desarrollos.entde;
 
 public class Garage{
     
-    public void printGarage() 
+    static public void printGarage() 
     {
-        system.out.print("|*]");
+        System.out.print("|*]"); //Correción sintactica
     }
 }
